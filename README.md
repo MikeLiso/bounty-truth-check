@@ -1,5 +1,7 @@
 # Bounty Truth Check
 
+**Live: https://mikeliso.github.io/bounty-truth-check/** — free, no sign-up, runs in your browser.
+
 **An open agentic website where a network of four agents checks, in your browser, whether a
 "we pay for this task" listing is real, still open and safe — before you, or your AI
 agent, spend hours on it.** The agents' deterministic checks run for everyone without a

@@ -96,5 +96,5 @@ test("no secrets or keys in any published file", async () => {
 test("index.html has the runtime mount slots, a key-free checker and loads modules", async () => {
   const html = await readFile(new URL("index.html", site), "utf8");
   for (const s of ['data-ns-slot="header"', 'data-ns-slot="chat"', 'data-ns-slot="agents"', 'data-ns-slot="settings"', 'id="check-form"', 'src="site.js"', 'src="js/app.js"']) assert.ok(html.includes(s), s);
-  assert.ok(!/<script(?![^>]*type="(module|application\/json)")[^>]*>/.test(html), "only module or JSON scripts");
+  assert.ok(!/<script(?![^>]*type="(module|application\/json|application\/ld\+json)")[^>]*>/.test(html), "only module, JSON or JSON-LD scripts");
 });
