@@ -1,0 +1,17 @@
+/agent-manifest.json
+  Access-Control-Allow-Origin: *
+/bounty_truth_check.network.json
+  Access-Control-Allow-Origin: *
+/links.json
+  Access-Control-Allow-Origin: *
+/agent-mcp.json
+  Access-Control-Allow-Origin: *
+/.well-known/nsdeploy.json
+  Access-Control-Allow-Origin: *
+/.well-known/nsdeploy-agent.json
+  Access-Control-Allow-Origin: *
+/runtime/sandbox-worker.js
+  Content-Security-Policy: default-src 'none'; script-src blob:; connect-src 'none'; worker-src 'none'
+/*
+  Content-Security-Policy: default-src 'self'; connect-src 'self' https:; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+  Referrer-Policy: no-referrer

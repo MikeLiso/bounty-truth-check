@@ -1,0 +1,71 @@
+:root {
+  --bg: #f7f8fa; --fg: #1d2330; --muted: #5a6475; --card: #ffffff; --border: #d6dbe3;
+  --primary: #1f4e79; --ok: #1e7a46; --warn: #8a5a00; --risk: #b23c17; --reject: #9b1c1c;
+  --ok-bg: #e7f5ec; --warn-bg: #fff4dc; --risk-bg: #fde9e1; --reject-bg: #fbe3e3; --info-bg: #eef1f6;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--primary); }
+.muted { color: var(--muted); }
+.top { background: var(--primary); color: #fff; padding: 32px 0 24px; }
+.top a { color: #fff; }
+.top h1 { margin: 4px 0 8px; font-size: 2.2rem; }
+.eyebrow { margin: 0; text-transform: uppercase; letter-spacing: .06em; font-size: .78rem; opacity: .85; }
+.lead { font-size: 1.15rem; max-width: 760px; margin: 0 0 12px; }
+main section { margin: 32px 0; }
+h2 { font-size: 1.45rem; margin: 0 0 8px; }
+form { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; display: grid; gap: 6px; }
+label { font-weight: 600; }
+input[type=url], textarea { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; background: #fff; color: var(--fg); }
+textarea { font-family: ui-monospace, Menlo, monospace; font-size: .9rem; }
+.row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
+.row p { margin: 0; }
+main button { font: inherit; font-weight: 600; padding: 9px 16px; border-radius: 8px; border: 1px solid var(--primary); background: var(--primary); color: #fff; cursor: pointer; }
+main button.secondary, dialog button.secondary { background: #fff; color: var(--primary); }
+main button:disabled { opacity: .6; cursor: progress; }
+.samples-box { margin: 12px 0; }
+.samples { display: flex; flex-wrap: wrap; gap: 8px; }
+.samples button { font-size: .9rem; padding: 6px 12px; }
+.report { margin-top: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; outline: none; }
+.verdict { border-radius: 10px; padding: 14px 16px; border-left: 8px solid; }
+.verdict p { margin: 6px 0 0; }
+.verdict-label { font-size: 1.6rem; font-weight: 800; }
+.verdict-meta { font-size: .85rem; color: var(--muted); }
+.v-VERIFIED { background: var(--ok-bg); border-color: var(--ok); }
+.v-UNVERIFIED { background: var(--info-bg); border-color: var(--primary); }
+.v-HIGH_RISK { background: var(--risk-bg); border-color: var(--risk); }
+.v-REJECTED { background: var(--reject-bg); border-color: var(--reject); }
+.v-UNKNOWN { background: var(--warn-bg); border-color: var(--warn); }
+.source-error { color: var(--reject); font-weight: 600; }
+.source-note { color: var(--warn); }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin: 14px 0; }
+.facts dt { font-weight: 600; }
+.facts dd { margin: 0; overflow-wrap: anywhere; }
+.agents-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 14px 0; align-items: start; }
+.agent-card { border: 1px solid var(--border); border-radius: 10px; padding: 12px; background: #fcfcfd; }
+.agent-card h3 { margin: 0; font-size: 1.05rem; }
+.agent-card > p { margin: 2px 0 8px; font-size: .85rem; }
+.findings { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.finding { font-size: .92rem; overflow-wrap: anywhere; }
+.chip { display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase; padding: 1px 7px; border-radius: 999px; letter-spacing: .03em; }
+.sev-ok .chip, .sev-info .chip { background: var(--ok-bg); color: var(--ok); }
+.sev-info .chip { background: var(--info-bg); color: var(--muted); }
+.sev-warn .chip { background: var(--warn-bg); color: var(--warn); }
+.sev-risk .chip { background: var(--risk-bg); color: var(--risk); }
+.sev-reject .chip { background: var(--reject-bg); color: var(--reject); }
+.evidence { margin: 3px 0 0 4px; font-size: .85rem; color: var(--muted); }
+.evidence q { font-style: italic; }
+.evidence code { font-size: .8rem; }
+.report pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .8rem; max-height: 360px; overflow: auto; background: #f3f4f7; padding: 10px; border-radius: 8px; }
+.report > button { margin: 4px 0 8px; }
+.contacts-box { margin-top: 12px; font-size: .9rem; }
+#contacts { font-family: ui-monospace, Menlo, monospace; font-size: .8rem; overflow-wrap: anywhere; }
+.assistant { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.assistant-note { font-size: .9rem; color: var(--muted); }
+code { overflow-wrap: anywhere; }
+dialog.consent { max-width: 520px; width: 90%; border: 1px solid #888; border-radius: 12px; padding: 22px; font: 16px system-ui, sans-serif; }
+dialog.consent button { font: inherit; font-weight: 600; padding: 9px 16px; border-radius: 8px; border: 1px solid var(--primary); background: var(--primary); color: #fff; cursor: pointer; }
+dialog.consent button.secondary { background: #fff; color: var(--primary); }
+footer { padding: 24px 16px 40px; font-size: .85rem; }
+@media (max-width: 820px) { .agents-grid { grid-template-columns: 1fr; } .top h1 { font-size: 1.8rem; } }
