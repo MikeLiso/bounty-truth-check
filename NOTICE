@@ -1,0 +1,10 @@
+Bounty Truth Check
+Copyright 2026 the Bounty Truth Check authors.
+
+This product includes software from the agentic-web project
+(https://github.com/cognizant-ai-labs/agentic-web), licensed under the Apache License 2.0:
+  - site/runtime/            browser runtime (a copy of nsdeploy's runtime with the agentic-web edits), unchanged
+  - site/assistant.css       mounting styles from the agentify-website skill (colors changed)
+  - tools/build_network.mjs  network builder and checker from the agentify-website skill, unchanged
+  - tests/scripted_model.mjs test double from the agentify-website skill, unchanged
+Upstream commit: see tools/UPSTREAM_COMMIT.txt

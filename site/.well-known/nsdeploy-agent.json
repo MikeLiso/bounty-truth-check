@@ -1,0 +1,7 @@
+{
+  "protocol": "nsdeploy-agent-mcp/v1",
+  "network": "bounty_truth_check",
+  "front_man": "bounty_truth_judge",
+  "available": false,
+  "reason": "This is a static bundle; a public MCP facade requires an application host. Browser agents can use the WebMCP tool check_bounty_listing on the page."
+}

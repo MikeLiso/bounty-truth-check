@@ -1,0 +1,18 @@
+{
+  "protocol": "nsdeploy-link/v1",
+  "exports": [
+    {
+      "network": "bounty_truth_check",
+      "front_man": "bounty_truth_judge",
+      "aliases": [
+        "bounty_truth_check",
+        "bounty_truth_judge"
+      ],
+      "url": "bounty_truth_check"
+    }
+  ],
+  "imports": [],
+  "link_updates": {
+    "mode": "browser-local"
+  }
+}
